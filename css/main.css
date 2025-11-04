@@ -1,0 +1,29 @@
+/* ============================================
+   SEIYARA ENTERPRISE - MAIN STYLESHEET
+   Author: Your Name
+   Last Updated: November 2025
+   ============================================ */
+
+/* Import all CSS modules in order */
+
+/* 1. Base styles (variables, reset, typography) */
+@import url('base.css');
+
+/* 2. Layout components */
+@import url('header.css');
+@import url('hero.css');
+@import url('sections.css');
+
+/* 3. Page sections */
+@import url('about.css');
+@import url('solutions.css');
+@import url('partners.css');
+@import url('news.css');
+@import url('contact.css');
+
+/* 4. Footer and widgets */
+@import url('footer.css');
+@import url('quick-contact.css');
+
+/* 5. Responsive styles (must be last) */
+@import url('responsive.css');
