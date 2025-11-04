@@ -165,7 +165,7 @@ nav a:hover::after {
 header {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 800;
     background: transparent;
     backdrop-filter: none;
     box-shadow: none;
