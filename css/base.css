@@ -1,7 +1,7 @@
 /* ============================================
    BASE STYLES - Variables, Reset, Typography
    ============================================ */
-
+/* 
 :root {
     --bg-primary: #F7F9FB;
     --bg-secondary: #FFFFFF;
@@ -35,14 +35,11 @@
     box-sizing: border-box;
 }
 
-
-/* Smooth scroll */
 html {
     scroll-behavior: smooth;
 }
 
 
-/* Enhanced section reveal animation with more pronounced effect */
 .reveal {
     opacity: 0;
     transform: translateY(50px); 
@@ -63,9 +60,6 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* ============================================
-   NEW: LOGO CLICKABLE STYLES
-   ============================================ */
 
 .logo-area {
     cursor: pointer; 
@@ -79,6 +73,106 @@ body {
 .company-name {
     cursor: pointer;
     transition: color 0.2s ease;
+}
+
+.company-name:hover {
+    opacity: 0.8;
+} */
+
+/* ============================================
+   BASE STYLES - Variables, Reset, Typography
+   MODIFIED: Refined Smooth Scroll + Theme Transitions
+   ============================================ */
+
+:root {
+    --bg-primary: #F7F9FB;
+    --bg-secondary: #FFFFFF;
+    --text-primary: #0B2545;
+    --text-muted: #5A6C7D;
+    --color-primary: #0284c7;
+    --color-accent: #0ea5e9;
+    --color-cta: #FFB347;
+    --color-neutral: #E6EEF4;
+    --shadow-sm: 0 2px 8px rgba(11, 37, 69, 0.08);
+    --shadow-md: 0 4px 16px rgba(11, 37, 69, 0.12);
+    --shadow-lg: 0 8px 32px rgba(11, 37, 69, 0.16);
+    --rhythm: 8px;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #0B1929;
+    --bg-secondary: #132236;
+    --text-primary: #E6EEF4;
+    --text-muted: #A0B3C8;
+    --color-neutral: #1E3A52;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* MODIFIED: Refined reveal animation - subtle and smooth */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px); /* CHANGED: Back to subtle 30px */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* CHANGED: Separate transitions, no blur */
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background 0.5s ease, color 0.5s ease; /* CHANGED: Longer transition for smoother theme change */
+}
+
+/* NEW: Smooth theme transitions for all elements */
+* {
+    transition: background-color 0.5s ease, 
+                color 0.5s ease, 
+                border-color 0.5s ease,
+                box-shadow 0.5s ease;
+}
+
+/* NEW: Prevent transition on animations and transforms */
+.reveal,
+.floating-shape,
+.particle {
+    transition: opacity 0.8s ease, transform 0.8s ease !important;
+}
+
+/* ============================================
+   LOGO CLICKABLE STYLES
+   ============================================ */
+
+.logo-area {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.logo-area:hover {
+    transform: scale(1.05);
+}
+
+.company-name {
+    cursor: pointer;
+    transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 .company-name:hover {
