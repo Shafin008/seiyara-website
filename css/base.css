@@ -41,18 +41,12 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Section reveal animation */
-/* .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-} */
 
-/* MODIFIED: Enhanced section reveal animation with more pronounced effect */
+/* Enhanced section reveal animation with more pronounced effect */
 .reveal {
     opacity: 0;
-    transform: translateY(50px); /* CHANGED: from 30px to 50px for more dramatic reveal */
-    transition: all 1s ease; /* CHANGED: from 0.8s to 1s for smoother animation */
+    transform: translateY(50px); 
+    transition: all 1s ease; 
 }
 
 .reveal.active {
@@ -74,19 +68,19 @@ body {
    ============================================ */
 
 .logo-area {
-    cursor: pointer; /* NEW: Make logo area clickable */
+    cursor: pointer; 
     transition: transform 0.2s ease;
 }
 
 .logo-area:hover {
-    transform: scale(1.05); /* NEW: Slight zoom on hover */
+    transform: scale(1.05); 
 }
 
 .company-name {
-    cursor: pointer; /* NEW: Make company name clickable */
+    cursor: pointer;
     transition: color 0.2s ease;
 }
 
 .company-name:hover {
-    opacity: 0.8; /* NEW: Slight fade on hover */
+    opacity: 0.8;
 }

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // NEW: Add jQuery easing for smoother navigation scrolling
+    // Add jQuery easing for smoother navigation scrolling
     $.easing.easeInOutQuad = function(x, t, b, c, d) {
         if ((t /= d / 2) < 1) return c / 2 * t * t + b;
         return -c / 2 * ((--t) * (t - 2) - 1) + b;
@@ -160,7 +160,7 @@ $(document).ready(function() {
     });
     
     // ============================================
-    // NEW: LOGO/COMPANY NAME CLICK - Refresh page
+    // LOGO/COMPANY NAME CLICK - Refresh page
     // ============================================
     
     $('.logo-area, .company-name').click(function() {
@@ -168,7 +168,7 @@ $(document).ready(function() {
     });
 
     // ============================================
-    // NEW: SMOOTH SCROLL REVEAL ANIMATIONS
+    // SMOOTH SCROLL REVEAL ANIMATIONS
     // ============================================
     
     // Add reveal class to all sections and cards
@@ -198,7 +198,7 @@ $(document).ready(function() {
     revealOnScroll(); // Initial check on page load
     
     // ============================================
-    // NEW: STAGGERED ANIMATION FOR CARDS
+    // STAGGERED ANIMATION FOR CARDS
     // ============================================
     
     // Add stagger delays to solution cards
